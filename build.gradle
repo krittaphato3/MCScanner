@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.scanner'
+version '2.5-HYPER'
+
+repositories {
+    mavenCentral()
+}
+
+// FORCE JAVA 21 for Virtual Thread support
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation 'com.dslplatform:dsl-json-java8:1.9.9'
+    annotationProcessor 'com.dslplatform:dsl-json-java8:1.9.9'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'com.formdev:flatlaf:3.2.5'
+    implementation 'com.formdev:flatlaf-extras:3.2.5'
+    implementation 'com.formdev:flatlaf-fonts-roboto:2.137'
+}
+
+application {
+    mainClass = 'com.scanner.Main'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
