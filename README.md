@@ -73,4 +73,4 @@ This tool is intended for **educational purposes and legitimate network administ
 
 ## 📄 License
 
-[MIT License](LICENSE) (or your preferred license)
+[MIT License](LICENSE)
